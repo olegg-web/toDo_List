@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: sans-serif;
+  
+}
+body{
+  background-color: rgb(172, 168, 168);
+}
+*:focus {
+  outline: none;
+  box-shadow: 0px 0px 7px 3px rgba(255, 255, 255, 0.75);
+}
+
+.todo {
+  width: 385px;
+  height: 278px;
+  margin: 30px auto;
+  background: linear-gradient(0deg, #2b89e0 32%, #b7c6f0 100%);
+  overflow: hidden;
+  border: 1px solid rgb(168, 165, 165);
+  border-radius: 15px;
+  box-shadow: -12px 20px 5px 8px rgba(0, 0, 0, 0.75);
+}
+
+.todoBlock {
+  width: 400px;
+  height: 70px;
+  overflow: hidden;
+}
+
+.inp {
+  margin: 20px 14px 20px 20px;
+  width: 250px;
+  height: 30px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 1px #838080 solid;
+}
+
+.btn {
+  background: #4673d3;
+  color: white;
+  border-radius: 5px;
+  border-width: 1px;
+  width: 70px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #042366;
+}
+
+.btn:active {
+  background: #07a514;
+}
+
+li {
+  margin: 10px 0 10px 20px;
+  background-color: rgb(255, 203, 203);
+  width: 340px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px rgb(204, 201, 201) solid;
+  list-style-type: none;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 1px 1px 4px #353535;
+  position: relative;
+}
+
+.todoList {
+  overflow: scroll;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 50px;  
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: #06213b;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 4px #f3faf7;
+}
+
+.mark {
+  margin-right: 10px;
+  background-color: rgb(216, 30, 30);
+}
+
+.buttonDel {
+  right: 10px;
+  position: absolute;
+  font-size: 12px;
+  width: 55px;
+  height: 20px;
+  background: #4673d3;
+  color: white;
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+.buttonDel:hover {
+  background: #042366;
+}
+
+.buttonDel:active {
+  margin-top: 1px;
+  background: #c40707;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+.sendField{
+  background-color: rgb(202, 248, 193);
+}
