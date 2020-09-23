@@ -1,15 +1,13 @@
-let inData = document.querySelector('#inData');
-let btn = document.querySelector('.btn');
-let todoList = document.querySelector('.todoList');
+let inData = document.querySelector('#inData'),
+btn = document.querySelector('.btn'),
+todoList = document.querySelector('.todoList');
 
-btn.addEventListener('click', funcClick);
-
-function funcClick() {
+funcClick=()=> {
     if(inData.value !== ''){
         
-        let field = document.createElement('li');
-        let check = document.createElement("input");
-        let buttonDel = document.createElement("input");
+        let field = document.createElement('li'),
+        check = document.createElement("input"),
+        buttonDel = document.createElement("input");
     
         field.innerHTML = inData.value;
         todoList.appendChild(field);
@@ -30,14 +28,16 @@ function funcClick() {
     alert('Введите задачу!')
 }
 }
+btn.addEventListener('click', funcClick);
 
-function toDoDelete(buttonDel) {
-    buttonDel.addEventListener("click", () => {
+toDoDelete=(buttonDel)=> {
+    buttonDel.addEventListener("click", (event) => {
         buttonDel.parentElement.remove();
+        event.stopPropagation
     });
 }
 
-function clickChecked(check, field) {
+clickChecked=(check, field)=> {
     check.addEventListener('click', () => {
         field.classList.toggle('checked');
         field.classList.toggle('sendField');
